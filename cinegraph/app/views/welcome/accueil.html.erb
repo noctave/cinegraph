@@ -13,7 +13,6 @@
       <tr>
         <td><%= movie.movie_id %></td>
         <td><%= link_to 'Voir', movie %></td>
-        <td><%= link_to 'Editer', edit_movie_path(movie) %></td>
         <td><%= link_to 'Supprimer', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
