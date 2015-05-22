@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   # GET /movies/1
   # GET /movies/1.json
   def show
+    @test = Imdb::Search.new("Iron man").movies
   end
 
   # GET /movies/new
