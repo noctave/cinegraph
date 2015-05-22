@@ -3,9 +3,11 @@
 one:
   movie_id: 1
   title: MyString
+  url: MyString
   user_id: 
 
 two:
   movie_id: 1
   title: MyString
+  url: MyString
   user_id: 

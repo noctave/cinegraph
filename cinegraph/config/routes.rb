@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :movies
+  resources :movies
   get 'welcome/accueil'
 
   resources :movies
