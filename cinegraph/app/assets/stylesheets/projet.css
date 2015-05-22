@@ -1,0 +1,22 @@
+/*Premiere page (Login)*/
+.form-signin {
+    max-width: 330px;
+    padding: 8px;
+    margin: 3px auto;
+    border: 2px solid green;
+   -moz-border-radius: 10px;
+    border-radius: 10px; 
+	
+}
+
+
+/*Deuxieme page (notes de frais)*/
+.form-note {
+    max-width: 35%;
+    padding: 8px;
+    margin: 3px auto;
+    border: 2px solid black;
+   -moz-border-radius: 10px;
+    border-radius: 10px; 
+	
+}
