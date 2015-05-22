@@ -44,5 +44,5 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'awesome_print'
-gem 'allocine_parser'
+gem 'imdb'
+gem 'neo4j'
