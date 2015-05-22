@@ -8,7 +8,6 @@
     <% @movies.each do |movie| %>
       <tr>
         <td><%= movie.movie_id %></td>
-        <td><%= link_to 'Voir', movie %></td>
         <td><%= link_to 'Supprimer', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
