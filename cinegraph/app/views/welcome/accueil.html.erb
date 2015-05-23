@@ -5,11 +5,11 @@
   <form class="navbar-form navbar-left" role="search">
     <div class="form-group">
       <%= form_tag("/search", method: "get") do %>
-        <%= text_field_tag(:q, 'Tapez votre recherche ici ...') %>
+        <%= text_field_tag 'q', nil, placeholder: 'Enter search term...' %>
         <%= submit_tag("Rechercher", :class => 'btn btn-default') %>
       <% end %>
     </div>
-
+    <% puts @testidpass %>
     <% unless @tests.nil? || @tests == 0 %>
     <table>
       <thead>
@@ -25,7 +25,7 @@
           <tr>
             <td><%= movie.title %></td>
             <td><a href="<%= movie.url %>" target="_blank">Voir sur Imdb</a></td>
-            <td><a href="<%= %>" target="_blank">Ajouter</a></td>
+            <td><a href="/?v=<%= movie.id %>">Ajouter</a></td>
           </tr>
         <% end %>
       </tbody> 

@@ -7,5 +7,14 @@ class WelcomeController < ApplicationController
     else
 	  @tests = nil
     end
+
+	if params[:v]
+  		id = params[:v]
+  		@testidpass = id
+  		#imdbMovie = Imdb::Movie.new(id)
+  		#Movie::Create(imdbMovie.id, )
+  		#redirect_to (accueil)
+  	end
   end
+
 end
