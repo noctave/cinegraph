@@ -10,10 +10,13 @@ class WelcomeController < ApplicationController
 
 	if params[:v]
   		id = params[:v]
-  		@testidpass = id
-  		#imdbMovie = Imdb::Movie.new(id)
-  		#Movie::Create(imdbMovie.id, )
-  		#redirect_to (accueil)
+  		imdbMovie = Imdb::Movie.new(id)
+  		puts imdbMovie.title
+  		puts imdbMovie.id
+  		puts imdbMovie.url
+  		puts current_user.id
+  		#Movie::Create(imdbMovie.id,imdbMovie.title,imdbMovie.url,current_user.id)
+  		redirect_to (root_path)
   	end
   end
 
