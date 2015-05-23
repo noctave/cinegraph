@@ -10,8 +10,25 @@
       <% end %>
     </div>
 
-    <br><br><br><br><br><br><br><br>
+    <% unless @tests.nil? || @tests == 0 %>
+    <table>
+      <thead>
+        <tr>
+          <th>title</th>
+          <th>url</th>
+        </tr>
+      </thead>
 
+      <tbody>
+        <% @tests.take(7).each do |movie| %>
+          <tr>
+            <td><%= movie.title %></td>
+            <td><a href="<%= movie.url %>" target="_blank">Voir sur Imdb</a></td>
+          </tr>
+        <% end %>
+      </tbody> 
+    </table>
+    <% end %>
     <!-- <p class="navbar-text pull-right"> -->
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
@@ -30,45 +47,3 @@
   </div>
 </form>
 
-
-
-<!--
-<h1>Mes vidéos</h1>
-
-<table>
-  <thead>
-  </thead>
-
-  <tbody>
-    <% @movies.each do |movie| %>
-      <tr>
-        <td><%= movie.movie_id %></td>
-        <td><%= link_to 'Supprimer', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th>id</th>
-      <th>url</th>
-      <th>title</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tests.each do |movie| %>
-      <tr>
-        <td><%= movie.id %></td>
-        <td><%= movie.url %></td>
-        <td><%= movie.title %></td>
-      </tr>
-    <% end %>
-  </tbody> 
-</table>
-
-<br>
-
--->
