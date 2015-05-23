@@ -14,8 +14,9 @@
     <table>
       <thead>
         <tr>
-          <th>title</th>
-          <th>url</th>
+          <th>Titre</th>
+          <th>Lien</th>
+          <th>Ajouter</th>
         </tr>
       </thead>
 
@@ -24,6 +25,7 @@
           <tr>
             <td><%= movie.title %></td>
             <td><a href="<%= movie.url %>" target="_blank">Voir sur Imdb</a></td>
+            <td><a href="<%= %>" target="_blank">Ajouter</a></td>
           </tr>
         <% end %>
       </tbody> 
@@ -32,12 +34,12 @@
     <!-- <p class="navbar-text pull-right"> -->
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'btn btn-default navbar-btn' %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn btn-default navbar-btn'  %> |
-      <%= link_to 'New Movie', new_movie_path, :class => 'btn btn-default navbar-btn' %>
+      <%= link_to 'Modifier profile', edit_user_registration_path, :class => 'btn btn-default navbar-btn' %> |
+      <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, :class => 'btn btn-default navbar-btn'  %> |
+      <%= link_to 'Mes films', new_movie_path, :class => 'btn btn-default navbar-btn' %>
     <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'btn btn-default navbar-btn'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'btn btn-default navbar-btn'  %>
+      <%= link_to "Inscription", new_user_registration_path, :class => 'btn btn-default navbar-btn'  %> |
+      <%= link_to "Connexion", new_user_session_path, :class => 'btn btn-default navbar-btn'  %>
     <% end %>
 
     
