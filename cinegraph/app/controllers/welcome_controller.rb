@@ -7,11 +7,15 @@ class WelcomeController < ApplicationController
     end
 
 	if params[:v]
-  		id = params[:v]
-  		imdbMovie = Imdb::Movie.new(id)
-      	arg = {:movie_id => imdbMovie.id, :title => imdbMovie.title, :url => imdbMovie.url, :user_id => current_user.id}
-      	Movie::create(arg)
-  		redirect_to (root_path)
+		if user_signed_in?
+      		id = params[:v]
+	  		imdbMovie = Imdb::Movie.new(id)
+	      	arg = {:movie_id => imdbMovie.id, :title => imdbMovie.title, :url => imdbMovie.url, :user_id => current_user.id}
+	      	Movie::create(arg)
+	  		redirect_to (root_path)
+    	else
+  			redirect_to (root_path)
+  		end
   	end
   end
 
