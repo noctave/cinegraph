@@ -15,7 +15,7 @@ class WelcomeController < ApplicationController
   		puts imdbMovie.id
   		puts imdbMovie.url
   		puts current_user.id
-  		#Movie::Create(imdbMovie.id,imdbMovie.title,imdbMovie.url,current_user.id)
+  		Movie.Create(imdbMovie.id,imdbMovie.title,imdbMovie.url,current_user.id)
   		redirect_to (root_path)
   	end
   end
