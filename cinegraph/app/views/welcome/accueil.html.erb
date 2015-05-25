@@ -15,7 +15,7 @@
         <thead>
           <tr>
             <th>Titre</th>
-            <th>Lien</th>
+            <th>Lien</th>&nbsp;
             <th>Ajouter</th>
           </tr>
         </thead>
@@ -24,7 +24,7 @@
           <% @tests.take(7).each do |movie| %>
             <tr>
               <td><%= movie.title %></td>
-              <td><a href="<%= movie.url %>" target="_blank">Voir sur Imdb</a></td>&nbsp;
+              <td><a href="<%= movie.url %>" target="_blank">Voir sur Imdb</a></td>
               <td><a href="/?v=<%= movie.id %>">Ajouter</a></td>
             </tr>
           <% end %>
