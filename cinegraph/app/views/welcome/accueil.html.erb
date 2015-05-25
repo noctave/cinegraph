@@ -17,6 +17,9 @@
             <th>Titre</th>
             <th>Lien</th>
             <th>Ajouter</th>
+            <td><%= movie.title %></td>
+            <td><a href="<%= movie.url %>" target="_blank">Voir sur Imdb</a></td>&nbsp;
+            <td><a href="/?v=<%= movie.id %>">Ajouter</a></td>
           </tr>
         </thead>
 
