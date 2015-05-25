@@ -1,16 +1,17 @@
-redirect_to "/welcome/accueil"
-
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Movies</h1>
+<h1>Mes films</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Movie</th>
-      <th>Title</th>
+      <th>Numéro Films &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;</th>
+      <th>Titre &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;</th>
       <th>Url</th>
-      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,15 +22,10 @@ redirect_to "/welcome/accueil"
         <td><%= movie.movie_id %></td>
         <td><%= movie.title %></td>
         <td><%= movie.url %></td>
-        <td><%= movie.user %></td>
-        <td><%= link_to 'Show', movie %></td>
-        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Supprimer', movie, method: :delete, data: { confirm: 'Ete vous sur ?' } %></td>
       </tr>
     <% end %>
   </tbody>
+
 </table>
-
-<br>
-
-<%= link_to 'New Movie', new_movie_path %>
+<%= link_to 'Back', root_path %>
