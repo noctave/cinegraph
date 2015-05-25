@@ -2,6 +2,7 @@
   <div align="center">  <%= image_tag("ruby.gif", :alt => "Image index") %>
   <!--<img src="ruby.gif" alt="..." class="img-rounded" width="185" height="60"> -->
   <br><br><br><br>
+  <!-- Barre de recherche vers api imdb-->
   <form class="navbar-form navbar-left" role="search">
     <div class="form-group">
       <%= form_tag("/search", method: "get") do %>
@@ -34,11 +35,16 @@
     <!-- <p class="navbar-text pull-right"> -->
     <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'Modifier profile', edit_user_registration_path, :class => 'btn btn-default navbar-btn' %> |
+     <!-- modification profil-->
+      <%= link_to 'Modifier profil', edit_user_registration_path, :class => 'btn btn-default navbar-btn' %> |
+      <!-- Déconnexion-->
       <%= link_to "Deconnexion", destroy_user_session_path, method: :delete, :class => 'btn btn-default navbar-btn'  %> |
       <%= link_to 'Mes films', movies_path, :class => 'btn btn-default navbar-btn' %>
+
     <% else %>
+    <!-- Inscription-->
       <%= link_to "Inscription", new_user_registration_path, :class => 'btn btn-default navbar-btn'  %> |
+      <!-- Connexion-->
       <%= link_to "Connexion", new_user_session_path, :class => 'btn btn-default navbar-btn'  %>
     <% end %>
 
