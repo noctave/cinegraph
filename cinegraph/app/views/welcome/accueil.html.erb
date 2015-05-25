@@ -10,27 +10,26 @@
         <%= submit_tag("Rechercher", :class => 'btn btn-default') %>
       <% end %>
     </div>
-    <% puts @testidpass %>
     <% unless @tests.nil? || @tests == 0 %>
-    <table>
-      <thead>
-        <tr>
-          <th>Titre</th>
-          <th>Lien</th>
-          <th>Ajouter</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @tests.take(7).each do |movie| %>
+      <table>
+        <thead>
           <tr>
-            <td><%= movie.title %></td>
-            <td><a href="<%= movie.url %>" target="_blank">Voir sur Imdb</a></td>
-            <td><a href="/?v=<%= movie.id %>">Ajouter</a></td>
+            <th>Titre</th>
+            <th>Lien</th>
+            <th>Ajouter</th>
           </tr>
-        <% end %>
-      </tbody> 
-    </table>
+        </thead>
+
+        <tbody>
+          <% @tests.take(7).each do |movie| %>
+            <tr>
+              <td><%= movie.title %></td>
+              <td><a href="<%= movie.url %>" target="_blank">Voir sur Imdb</a></td>
+              <td><a href="/?v=<%= movie.id %>">Ajouter</a></td>
+            </tr>
+          <% end %>
+        </tbody> 
+      </table>
     <% end %>
     <!-- <p class="navbar-text pull-right"> -->
     <% if user_signed_in? %>
